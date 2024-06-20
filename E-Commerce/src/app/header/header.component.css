@@ -4,29 +4,29 @@
 }
 
 .nav h1{
-    font-size: 35px;
+    font-size: 40px;
     color: blueviolet;
     margin: 0;
 }
 
-.nav-search{
+.nav .nav-search{
     margin-left: 5%;
-    margin-right: 5px;
+    margin-right: 5%;
     margin-top: 5px;
     display: flex;
     flex: 1;
 }
-.nav-search input{
+.nav .nav-search input{
     flex: 1;
-    border: 1px solid black;
+    border: 1px solid blueviolet;
     border-right: none;
     color: blueviolet;
     height: 35px;
 }
- .nav-search button{
+ .nav .nav-search button{
     border: 1px solid black;
     color: blueviolet;
-    height: 38px;
+    height: 39px;
  }
 
  .nav ul{
