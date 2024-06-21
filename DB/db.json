@@ -1,0 +1,34 @@
+{
+  "seller": [
+    {
+      "id": 1,
+      "name": "Vikalp Khandelwal",
+      "email": "vikalpkhandelwal2001@gmail.com",
+      "password": "#Vikalp@123"
+    },
+    {
+      "id": 2,
+      "name": "Aman Soni",
+      "email": "amansoni@gmail.com",
+      "password": "#Aman@123"
+    },
+    {
+      "id": "3904",
+      "name": "Jitendra Panwar",
+      "password": "#Jitendra@123",
+      "email": "jitendrapanwar@gmail.com"
+    },
+    {
+      "id": "f03e",
+      "name": "Kratika Mundra",
+      "password": "#Kratika@123",
+      "email": "kratika@gmail.com"
+    },
+    {
+      "id": "1ea0",
+      "name": "Kratika Mundra",
+      "password": "#Kratika@123",
+      "email": "kratika@gmail.com"
+    }
+  ]
+}
