@@ -9,9 +9,9 @@ import { signUp } from '../data-type';
   styleUrls: ['./seller-auth.component.css']
 })
 export class SellerAuthComponent implements OnInit {
-  constructor(private seller: SellerService, private router: Router){
-
-  }
+  constructor(private seller: SellerService, private router: Router){}
+  showLogin = false
+  authError: string = ''
   ngOnInit(){
     this.seller.reloadSeller();
   }
@@ -19,5 +19,22 @@ export class SellerAuthComponent implements OnInit {
   signup(data: signUp){
     console.log(data);
     this.seller.userSignup(data);
+  }
+
+  login(data: signUp){
+    this.seller.userlogin(data);
+    this.seller.isLoginError.subscribe((isError)=> {
+      if(isError) {
+        this.authError = 'Username or password is incorrect';
+      }
+    })
+  }
+
+  openLogin(){
+    this.showLogin = true
+  }
+
+  openSignup(){
+    this.showLogin = false
   }
 }

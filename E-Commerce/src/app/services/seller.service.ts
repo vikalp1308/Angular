@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { signUp } from '../data-type';
+import { signUp, login } from '../data-type';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 @Injectable({
@@ -8,6 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class SellerService {
   isSellerLoggedIn = new BehaviorSubject<boolean>(false);
+  isLoginError = new BehaviorSubject<boolean>(false);
   constructor(private http: HttpClient, private router: Router) { }
   
   userSignup(data:signUp) {
@@ -15,6 +16,18 @@ export class SellerService {
       if(result) {
         localStorage.setItem('seller', JSON.stringify(result.body));
         this.router.navigate(['seller-home']);
+      }
+    })
+  }
+
+  userlogin(data: login) {
+    this.http.get(`http://localhost:3000/seller?email=${data.email}&password=${data.password}`).subscribe((result:any)=>{
+      if (result && result.length > 0) {
+        this.isLoginError.next(false);
+        localStorage.setItem('seller', JSON.stringify(result[0]));
+        this.router.navigate(['seller-home']);
+      } else {
+        this.isLoginError.next(true);
       }
     })
   }
