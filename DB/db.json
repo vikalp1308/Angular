@@ -1,13 +1,13 @@
 {
   "seller": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Vikalp Khandelwal",
       "email": "vikalpkhandelwal2001@gmail.com",
       "password": "#Vikalp@123"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Aman Soni",
       "email": "amansoni@gmail.com",
       "password": "#Aman@123"
@@ -29,6 +29,18 @@
       "name": "Kratika Mundra",
       "password": "#Kratika@123",
       "email": "kratika@gmail.com"
+    },
+    {
+      "id": "e75d",
+      "name": "Megha Khan",
+      "password": "1234",
+      "email": "megha@gmail.com"
+    },
+    {
+      "id": "ecf3",
+      "name": "Raghav Chandra",
+      "password": "123",
+      "email": "raghav@gmail.com"
     }
   ]
 }

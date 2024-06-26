@@ -13,14 +13,11 @@ export class SellerAuthComponent implements OnInit {
 
   }
   ngOnInit(){
-
+    this.seller.reloadSeller();
   }
 
   signup(data: signUp){
     console.log(data);
-    this.seller.userSignup(data).subscribe((response:any)=>{
-      console.log(response);
-      this.router.navigate(['seller-home']);
-    })
+    this.seller.userSignup(data);
   }
 }
