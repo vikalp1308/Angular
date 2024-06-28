@@ -9,10 +9,11 @@ import { BehaviorSubject } from 'rxjs';
 export class SellerService {
   isSellerLoggedIn = new BehaviorSubject<boolean>(false);
   isLoginError = new BehaviorSubject<boolean>(false);
+  baseURL: string = 'http://localhost:3000/'
   constructor(private http: HttpClient, private router: Router) { }
   
   userSignup(data:signUp) {
-    this.http.post('http://localhost:3000/seller', data, {observe: 'response'}).subscribe((result:any)=>{
+    this.http.post(`${this.baseURL}/seller`, data, {observe: 'response'}).subscribe((result:any)=>{
       if(result) {
         localStorage.setItem('seller', JSON.stringify(result.body));
         this.router.navigate(['seller-home']);
@@ -21,7 +22,7 @@ export class SellerService {
   }
 
   userlogin(data: login) {
-    this.http.get(`http://localhost:3000/seller?email=${data.email}&password=${data.password}`).subscribe((result:any)=>{
+    this.http.get(`${this.baseURL}seller?email=${data.email}&password=${data.password}`).subscribe((result:any)=>{
       if (result && result.length > 0) {
         this.isLoginError.next(false);
         localStorage.setItem('seller', JSON.stringify(result[0]));
