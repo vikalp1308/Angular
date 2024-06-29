@@ -78,5 +78,25 @@
       "password": "Vikalp@123",
       "email": "vikalp@gmail.com"
     }
+  ],
+  "product": [
+    {
+      "id": "48d8",
+      "name": "Pixel 7a",
+      "price": "34999",
+      "category": "Electronics",
+      "color": "Grey",
+      "description": "This is Best camera phone under this segment",
+      "image": "https://5.imimg.com/data5/SELLER/Default/2023/10/356311289/YT/YE/DY/147282547/google-pixel-7a-ram-8gb-128gb.jpg"
+    },
+    {
+      "id": "b127",
+      "name": "Samsung Refrigerator",
+      "price": "15999",
+      "category": "Electronics",
+      "color": "Red",
+      "description": "Samsung 183 L, 4 Star, Digital Inverter, Direct-Cool Single Door Refrigerator",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTjm0LHr3npHIJlZbnYd1F4Ogkp5P2LWY8XdRYeih0706cQGcE3LSpPJPLkzp4be43kqsUYTbXsy6gvgPzxmi9PkoQ_5hQWQB8UjHpev5HyW9w7eluEH_S2OAmobu6UmfY6kOGDNA&usqp=CAc"
+    }
   ]
 }
