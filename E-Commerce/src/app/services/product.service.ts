@@ -6,13 +6,18 @@ import { product } from '../data-type';
   providedIn: 'root'
 })
 export class ProductService {
-
+  baseURL = 'http://localhost:3000/product'
   constructor(private http: HttpClient) { }
 
   addProduct(data:product) {
-    return this.http.post('http://localhost:3000/product', data);
+    return this.http.post(this.baseURL, data);
   }
+
   productList(){
-    return this.http.get<product[]>('http://localhost:3000/product');
+    return this.http.get<product[]>(this.baseURL);
+  }
+  
+  deleteProduct(id: number){
+    return this.http.delete(`${this.baseURL}/${id}`);
   }
 }
